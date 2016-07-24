@@ -8,3 +8,18 @@ Template.body.helpers({
     return Resolutions.find();
   }
 });
+
+Template.body.events({
+  'submit .new-resolution': function(event){
+    var title = event.target.title.value;
+
+    Resolutions.insert({
+      title: title,
+      createdAt: new Date()
+    });
+
+    event.target.title.value = "";
+
+    return false;
+  }
+});
