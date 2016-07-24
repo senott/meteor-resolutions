@@ -1,22 +1,23 @@
 <head>
-  <title>Resolutions</title>
+    <title>Resolutions</title>
 </head>
 
 <body>
-  <header>
-    <h1>Monthly Resolutions</h1>
+    <div class="container">
+        <header>
+            <h1>Monthly Resolutions</h1>
 
-    <form class="new-resolution">
-      <input type="text" name="title" value="" placeholder="A new resolution">
-      <input type="submit" value="Submit">
-    </form>
+            <form class="new-resolution">
+                <input type="text" name="title" value="" placeholder="A new resolution">
+                <input type="submit" value="Submit">
+            </form>
 
-  </header>
-  <div class="container">
-    <ul>
-      {{#each resolutions}}
-        {{> resolution}}
-      {{/each}}
-    </ul>
-  </div>
+        </header>
+
+        <ul>
+            {{#each resolutions}}
+                {{> resolution}}
+            {{/each}}
+        </ul>
+    </div>
 </body>
